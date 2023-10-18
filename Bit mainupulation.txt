@@ -1,0 +1,98 @@
+** IS POWER OF 4 OR NOT? **
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int n;
+  int count=0;
+  cout<<"entr the number";
+  cin>>n;
+  // int value =(n&(n-1));
+  if(n>0 && n&(n-1)==0)
+  {
+    while(n){
+      n=n>>1;
+      count++;
+    }
+  }
+  if(count%2==0){
+    cout<<"this is power of 4";
+  }else if(n==1){
+    cout<<"this is power of 2";
+  }else{
+    cout<<"not power 4";
+  }
+  return 0;
+}
+-------------------------------------------------------------
+
+** IS POWER OF 2 OR NOT ? **
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int val = n&(n-1);
+    if(val==0){
+        cout<<"power of 2";
+    }else{
+        cout<<"not power of 2";
+    }
+}
+--------------------------------------------------------------
+** TOGGLE BIT **
+
+#include<iostream>
+using namespace std;
+int main() {
+   // i is 110 in binary
+   int i = 12, n;
+   
+   // Enter bit to be toggled:
+   cin >> n;
+   i ^= (1 << n); // Take XOR of i and 1 shifted n positions
+   cout << i;
+   return 0;
+}
+----------------------------------------------------
+** SET BIT **
+
+#include<iostream>
+using namespace std;
+int main() {
+  int n,position;
+  cin>>n>>position;
+  int res= n |1<<position;
+  cout<<res;
+}
+----------------------------------------------------
+** CLEAR BIT **
+
+#include<iostream>
+using namespace std;
+int main() {
+  int n,position;
+  cin>>n>>position;
+  int res= n & ~(1<<position);
+  cout<<res;
+}
+--------------------------------------------------
+** CHECKING FIRST BIT IS 0 OR NOT **
+
+#include<iostream>
+using namespace std;
+int main() {
+  int n,position;
+  cin>>n>>position;
+  int res= n |1<<position;
+  if(res==0){
+      cout<<"clear bit";
+  }else{
+      cout<<"set bit";
+  }
+}
+--------------------------------------------------------------------------------------
